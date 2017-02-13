@@ -181,6 +181,42 @@ Agora cliquem no botão GET e vejam o resultado. Aparecerá o novo empregado na 
 ![alt tag](https://i.imgsafe.org/22909269dc.png)
 
 
-### 2) Método: POST (Criar Novo: http://localhost:8000/employee/<employee_id> )
+### 3) Método: GET (By Id) (Selecionar Por Id: http://localhost:8000/employee/:employee_id/ )
 
-(Documentação em desenvolvimento....)
+Bom, agora vamos regastar um determinado funcionário através do id. E vejam o resultado abaixo:
+
+![alt tag](https://i.imgsafe.org/229f1c7fc1.png)
+
+
+### 4) Método: PUT (Atualizar Por Id: http://localhost:8000/employee/:employee_id/ )
+
+Assim como o método acima, vamos atualizar (alterar) o cadastro e depois cliquem no botão PUT e vejam o resultado abaixo:
+
+![alt tag](https://i.imgsafe.org/22a8ed0690.png)
+
+Os dados foram alterados com sucesso! :D
+
+### 5) Método: DELETE (Excluir Por Id: http://localhost:8000/employee/:employee_id/ )
+
+E enfim, o último método. Vamos excluir esse funcionário.... :( :( :( e Vejam o resultado abaixo:
+
+![alt tag](https://i.imgsafe.org/22b408e378.png)
+
+O Funcionário foi devidademente excluído e ao listar via GET observem que o funcionário(a) não consta mais na lista:
+
+![alt tag](https://i.imgsafe.org/22bab75efe.png)
+
+
+## Observações Finais:
+
+* Nunca tinha programado na minha vida em Python & Django. Porém, não senti dificuldade em aprender a linguagem uma vez que é uma linguagem de fácil interpretação e muito intuitiva. Me lembrou um pouco, por exemplo: Node.Js. Uma vez que há a necessidade de baixar pacotes via pip (no Node.Js é via npm) e como já programo em Node.Js ficou fácil a manipulação.
+
+* E outro ponto que curti demais é o DRF (Django Rest Framework). A questão, por exemplo, do 'makemigrations' e 'migrate' para atualizar o modelo para a BD, me lembrou muito os comandos do Entity Framework.
+Curti tanto programar em Python & Django que irei escrever um tutorial sobre a linguagem e o framework. :D :D
+
+* O único ponto negativo para mim foi a dificuldade em instalar os programar uma vez que o meu S.O é o Windows. Porém, como eu já programei em CentOs (RED HAT) então.... acredito que é questão de costume.
+
+* Procurei ler a documentação do Django e ver alguns cursos de Python para entender um pouco a sintaxe da linguagem.
+A questão do TDD.... se vocês executarem o teste... infelizmente ele não vai executar com erros.... eu tentei e tentei ver onde eu falhei.. mas.. infelizmente, não consegui encontrar o erro.... (mas, como não foi solicitado acredito que seja um plus eu ter tentado!! :D )
+
+* Bom... espero que tenham gostado. Vou fazer a versão dessa app em Node. E caso vocês queiram ver... bastam clicar [AQUI]()
