@@ -37,13 +37,21 @@ class ViewTestCase(TestCase):
         #employeelist_data = EmployeeListSerializer(instance=self.employeelist).data
         self.employeelist_data = {'name': 'Glau Lemos', 'email': 'skinclear86@gmail.com', 'departament': 'Information Technology'}
         self.response = self.client.post(
-            reverse('create'),
+            reverse('Add'),
             self.employeelist_data,
             format="json")
 
     # Aqui iremos testar se realmente criará de maneira satisfatória o empregado:
     def test_api_can_create_a_employeelist(self):
         self.assertEqual(self.response.status_code, status.HTTP_201_CREATED)
+    
+    # Aqui iremos testar se está retornando todos os valores dados do employee:
+    def test_api_can_get_a_employeelist(self):
+        employeelist = EmployeeList.objects.get()
+        response = self.client.get(
+            reverse('Details'),
+            kwargs={'pk': employeelist.id}, format="json")
+
 
 
 
