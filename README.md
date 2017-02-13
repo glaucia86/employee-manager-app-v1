@@ -130,4 +130,14 @@ djangorestframework==3.5.4
 
 ```
 
+## Executando os testes na Aplicação:
+
+Para executar os testes criados na aplicação, você deverá ir até a pasta da app onde está contido o arquivo 'manage.py' e 
+digitar o seguinte comando abaixo:
+
+```
+> python manage.py test
+
+```
+
 (Documentação em desenvolvimento....)
