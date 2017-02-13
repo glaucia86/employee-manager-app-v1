@@ -30,7 +30,7 @@ E o resultado do JSon (Response) deverá (exemplo):
       "department": "E-commerce"
     },
     {
-      "name": "Arnaldo Pereira",
+      "name": "Thiago Catoto",
       "email": "catoto@luizalabs.com",
       "department": "Mobile"
     }

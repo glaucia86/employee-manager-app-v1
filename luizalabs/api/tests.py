@@ -41,16 +41,27 @@ class ViewTestCase(TestCase):
             self.employeelist_data,
             format="json")
 
-    # Aqui iremos testar se realmente criará de maneira satisfatória o empregado:
+    # Aqui iremos testar se realmente criará de maneira satisfatória o empregado: METHOD: GET (ALL)
     def test_api_can_create_a_employeelist(self):
         self.assertEqual(self.response.status_code, status.HTTP_201_CREATED)
     
-    # Aqui iremos testar se está retornando todos os valores dados do employee:
+    # Aqui iremos testar se está retornando todos os valores dados do employee: METHOD: GET (By Id)
     def test_api_can_get_a_employeelist(self):
         employeelist = EmployeeList.objects.get()
         response = self.client.get(
             reverse('Details'),
-            kwargs={'pk': employeelist.id}, format="json")
+            kwargs={'pk': employeelist.id}, format='json')
+
+        self.assertAlmostEqual(response.status_code, status.HTTP_200_OK)
+        self.assertContains(response, employeelist)
+
+    # Aqui iremos testar se estará atualizando os valores para employee: METHOD: UPDATE
+    def test_api_can_update_employeelist(self):
+        update_employeelist = {'name': 'Updating Employee', 'email': 'update@update.com', 'departament': 'Updating Departament'}
+        res = self.client.put(
+            reverse('Update', kwargs{'pk': employeelist.id}),
+            update_employeelist, format='json'
+        )
 
 
 
