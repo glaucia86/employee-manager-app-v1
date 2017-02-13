@@ -1,7 +1,7 @@
 # Luizalabs Employee Manager Application 
 
-Desenvolvimento de uma web app 'fictícia' em Python & Django que simulará uma aplicação que gerenciará as informações do funcionários através de uma API que permita integrá-la a outros sistemas. 
-A aplicação irá ter: 
+Desenvolvimento de uma web app 'fictícia' em Python & Django Rest Framework que simulará uma aplicação que gerenciará as informações do funcionários através de uma API que permita integrá-la a outros sistemas. 
+A aplicação precisa ter: 
 
 * Um painel Admin feito em Django para que possa gerenciar os dados dos empregados;
 * E uma API que permita: listar, adicionar e remover os empregados (somente o Admin);
@@ -15,7 +15,7 @@ curl -H "Content-Type: application/javascript" http://localhost:8000/employee/
 
 ```
 
-E o resultado do JSon (Response) deverá (exemplo):
+E o resultado do JSon (Response) deverá ser (exemplo):
 
 ```
 [
@@ -45,12 +45,12 @@ E o resultado do JSon (Response) deverá (exemplo):
 - VirtualEnv ~ 15.1.0;
 - Conceito RestFul;
 - Django Rest Framework ~ 3.5.4;
-- Django ~ 1.8.3;
+- Django ~ 1.10;
 - Conceito Web & HTTP Protocol;
 - IDE: Visual Code;
-- Navicat Premium;
+- Navicat Premium (para fácil manipulação da base de dados - SQLite);
 - PostMan (para testar as API's criadas);
-- TDD (Test Driven Development);
+- TDD (Test Driven Development - não solicitado no desafio porém tentei fazer....);
 
 ## Acompanhamento do Desenvolvimento dos BackLogs do Projeto:
 
@@ -139,5 +139,31 @@ digitar o seguinte comando abaixo:
 > python manage.py test
 
 ```
+
+
+## Resultados dos Requests via REST:
+
+### 1) Método: GET (Selecionar Todos: http://localhost:8000/employee/ )
+
+Antes.... execute o comando, na pasta raiz do projeto: 'api' o cmd:
+
+```
+> python manage.py runserver
+
+```
+
+Depois Abre a página em 
+
+```
+curl -H "Content-Type: application/javascript" http://localhost:8000/employee/
+
+```
+
+E vejam a lista de todos os funcionários cadastrados abaixo: 
+
+![alt tag](https://i.imgsafe.org/227579d913.png)
+
+
+
 
 (Documentação em desenvolvimento....)
