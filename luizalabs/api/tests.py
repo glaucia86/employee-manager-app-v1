@@ -41,6 +41,11 @@ class ViewTestCase(TestCase):
             self.employeelist_data,
             format="json")
 
+    # Aqui iremos testar se realmente criará de maneira satisfatória o empregado:
+    def test_api_can_create_a_employeelist(self):
+        self.assertEqual(self.response.status_code, status.HTTP_201_CREATED)
+
+
 
 
 
