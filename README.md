@@ -115,6 +115,7 @@ Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
 Bom, depois que tudo estiver instalado, vamos averiguar se todo o ambiente já está preparado. Para isso, basta digitar o seguinte comando abaixo:
 
 ```
+
 > python -m pip freeze
 
 ```
@@ -136,6 +137,7 @@ Para executar os testes criados na aplicação, você deverá ir até a pasta da
 digitar o seguinte comando abaixo:
 
 ```
+
 > python manage.py test
 
 ```
@@ -148,6 +150,7 @@ digitar o seguinte comando abaixo:
 Antes.... execute o comando, na pasta raiz do projeto: 'api' o cmd:
 
 ```
+
 > python manage.py runserver
 
 ```
@@ -155,6 +158,7 @@ Antes.... execute o comando, na pasta raiz do projeto: 'api' o cmd:
 Depois Abre a página em 
 
 ```
+
 curl -H "Content-Type: application/javascript" http://localhost:8000/employee/
 
 ```
@@ -163,6 +167,18 @@ E vejam a lista de todos os funcionários cadastrados abaixo:
 
 ![alt tag](https://i.imgsafe.org/227579d913.png)
 
+
+
+
+### 2) Método: POST (Criar Novo: http://localhost:8000/employee/ )
+
+Na mesma página, insira um novo cadastro nos campos abaixo e clique no botão POST. E vejam o resultado abaixo:
+
+![alt tag](https://i.imgsafe.org/228955dda4.png)
+
+Agora clicam no botão GET e vejam o resultado. Aparecerá o novo empregado na lista:
+
+![alt tag](https://i.imgsafe.org/22909269dc.png)
 
 
 
