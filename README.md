@@ -176,10 +176,11 @@ Na mesma página, insira um novo cadastro nos campos abaixo e clique no botão P
 
 ![alt tag](https://i.imgsafe.org/228955dda4.png)
 
-Agora clicam no botão GET e vejam o resultado. Aparecerá o novo empregado na lista:
+Agora cliquem no botão GET e vejam o resultado. Aparecerá o novo empregado na lista:
 
 ![alt tag](https://i.imgsafe.org/22909269dc.png)
 
 
+### 2) Método: POST (Criar Novo: http://localhost:8000/employee/<employee_id> )
 
 (Documentação em desenvolvimento....)
