@@ -9,5 +9,5 @@ class EmployeeList(models.Model):
 
     #Aqui estou criando uma função para que retorne nome do empregado no admin:
     def __str__(self):
-        return self.name
+        return "{}".format(self.name)
     
