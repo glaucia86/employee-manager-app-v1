@@ -57,14 +57,13 @@ class ViewTestCase(TestCase):
 
     # Aqui iremos testar se estará atualizando os valores para employee: METHOD: PUT
     def test_api_can_update_employeelist(self):
-        update_employeelist = {'name': 'Updating Employee', 'email': 'update@update.com', 'departament': 'Updating Departament'}
+        change_employeelist = {'name': 'New Employee'}
         res = self.client.put(
-            reverse('details', kwargs={'pk': employeelist.id}),
-            update_employeelist, format='json')
+            reverse('details', kwargs={'pk': bucketlist.id}),
+            change_employeelist, format='json')
     
     self.assertEqual(res.status_code, status.HTTP_200_OK)
-
-    
+   
     #Aqui iremos testar se estará deletando o valor pelo Id: METHOD: DELETE:
     def test_api_can_delete_employeelist(self):
         employeelist = EmployeeList.objects.get()
