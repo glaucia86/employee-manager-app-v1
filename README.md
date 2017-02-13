@@ -43,13 +43,14 @@ E o resultado do JSon (Response) deverá (exemplo):
 - Python ~ 3.5.0;
 - Pip ~ 9.0.1;
 - VirtualEnv ~ 15.1.0;
+- Conceito RestFul;
+- Django Rest Framework ~ 3.5.4;
 - Django ~ 1.8.3;
 - Conceito Web & HTTP Protocol;
-- Bootstrap Framework 3;
-- HTML;
-- CSS;
 - IDE: Visual Code;
 - Navicat Premium;
+- PostMan (para testar as API's criadas);
+- TDD (Test Driven Development);
 
 ## Acompanhamento do Desenvolvimento dos BackLogs do Projeto:
 
@@ -60,13 +61,13 @@ desenvolvido, basta clicar [Aqui](https://trello.com/b/p7vkH4Bs/desafio-luizalab
 
 Procurando seguir o padrão e design das API's, segue abaixo as URI's das rotas a serem desenvolvidas:
 
- ROTA                     |     HTTP(Verbo)   |      Descrição        | 
-------------------------- | ----------------- | --------------------- | 
-/employees                |       GET         | Selecionar Todos      | 
-/employee                 |       POST        | Atualizar Por Id      | 
-/employee/:employee_id    |       GET         | Selecionar Por Id     | 
-/employee/:employee_id    |       PUT         | Atualizar Por Id      |    
-/employee/:employee_id    |       DELETE      | Excluir Por Id        |
+ ROTA                      |     HTTP(Verbo)   |      Descrição        | 
+-------------------------  | ----------------- | --------------------- | 
+/employee                  |       GET         | Selecionar Todos      | 
+/employee                  |       POST        | Criar                 | 
+/employee/:employee_id     |       GET         | Selecionar Por Id     | 
+/employee/:employee_id/    |       PUT         | Atualizar Por Id      |    
+/employee/:employee_id/    |       DELETE      | Excluir Por Id        |
 
 
 ## Padrão da Arquitetura do Projeto:
@@ -102,6 +103,15 @@ Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
 
 ```
 
+4) Instalar o Django Rest Framework:
+
+Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
+
+```
+> python -m pip instal djangorestframework
+
+```
+
 Bom, depois que tudo estiver instalado, vamos averiguar se todo o ambiente já está preparado. Para isso, basta digitar o seguinte comando abaixo:
 
 ```
@@ -116,6 +126,7 @@ C:\>python -m pip freeze
 Django==1.10.5
 psycopg2==2.6.2
 virtualenv==15.1.0
+djangorestframework==3.5.4
 
 ```
 
