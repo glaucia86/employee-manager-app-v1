@@ -1,7 +1,11 @@
+from rest_framework.test import APIClient
+from rest_framework import status
+from django.core.urlresolvers import reverse
+
 from django.test import TestCase
 from .models import EmployeeList
 
-#Esta classe irá definir o conjunto de testes para o modelo da classe: 'Employee':
+#Esta classe irá definir o conjunto de testes para o modelo da classe: 'EmployeeList':
 class ModelTestCase(TestCase):
 
     #Essa função aqui será responsável por testar o cliente e as variáveis
@@ -22,6 +26,21 @@ class ModelTestCase(TestCase):
         self.employeelist.save()
         new_count = EmployeeList.objects.count()
         self.assertNotEqual(old_count, new_count)
+
+# Aqui irei testar a parte lógica da aplicação: 'views.py':
+class ViewTestCase(TestCase):
+
+    #Essa função aqui será responsável por testar o cliente e as variáveis
+    def setUp(self):
+        self.client = APIClient()
+
+        #employeelist_data = EmployeeListSerializer(instance=self.employeelist).data
+        self.employeelist_data = {'name': 'Glau Lemos', 'email': 'skinclear86@gmail.com', 'departament': 'Information Technology'}
+        self.response = self.client.post(
+            reverse('create'),
+            self.employeelist_data,
+            format="json")
+
 
 
 
