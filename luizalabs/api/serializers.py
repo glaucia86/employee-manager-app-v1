@@ -7,4 +7,4 @@ class EmployeeListSerializer(serializers.ModelSerializer):
     #O 'Meta' irá mapear os campos serializados com os campos da classe modelo:
     class Meta:
         model = EmployeeList
-        fields = ('id', 'name', 'email', 'departament')
+        fields = ('id', 'name', 'email', 'department')

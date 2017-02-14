@@ -4,7 +4,7 @@ from django.db import models
 class EmployeeList(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=50)
-    departament = models.CharField(max_length=50)
+    department = models.CharField(max_length=50)
 
 
     #Aqui estou criando uma função para que retorne nome do empregado no admin:
