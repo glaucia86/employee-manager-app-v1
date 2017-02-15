@@ -217,6 +217,6 @@ Curti tanto programar em Python & Django que irei escrever um tutorial sobre a l
 * O único ponto negativo para mim foi a dificuldade em instalar os programar uma vez que o meu S.O é o Windows. Porém, como eu já programei em CentOs (RED HAT) então.... acredito que é questão de costume.
 
 * Procurei ler a documentação do Django e ver alguns cursos de Python para entender um pouco a sintaxe da linguagem.
-A questão do TDD.... se vocês executarem o teste... infelizmente ele não vai executar com erros.... eu tentei e tentei ver onde eu falhei.. mas.. infelizmente, não consegui encontrar o erro.... (mas, como não foi solicitado acredito que seja um plus eu ter tentado!! :D )
+A questão do TDD.... se vocês executarem o teste... infelizmente vai executar com erros.... eu tentei e tentei ver onde eu falhei.. mas.. infelizmente, não consegui encontrar o erro.... (mas, como não foi solicitado acredito que seja um plus eu ter tentado!! :D )
 
-* Bom... espero que tenham gostado. Vou fazer a versão dessa app em Node. E caso vocês queiram ver... bastam clicar [AQUI]()
+* Bom... espero que tenham gostado. Vou fazer a versão dessa app em Node. E caso vocês queiram ver... bastam clicar [AQUI](https://github.com/glaucia86/employee-manager-app-node-v1)
