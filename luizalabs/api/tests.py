@@ -1,6 +1,6 @@
 from rest_framework.test import APIClient
 from rest_framework import status
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from django.test import TestCase
 from .models import EmployeeList
@@ -25,7 +25,7 @@ class ViewTestCase(TestCase):
 
     def setUp(self):
         self.client = APIClient()
-        self.employeelist_data = {'name': 'Glaucia Lemos'}
+        self.employeelist_data = {'name': 'Glaucia Lemos', 'email': 'glaucia@glauciadev.com', 'department': 'Microsoft'}
         self.response = self.client.post(
             reverse('create'),
             self.employeelist_data,
@@ -34,25 +34,24 @@ class ViewTestCase(TestCase):
     """ Aqui iremos testar se realmente criará de maneira satisfatória o empregado: METHOD: GET (ALL) """
     def test_api_can_create_a_employeelist(self):
         self.assertEqual(self.response.status_code, status.HTTP_201_CREATED)
-    
+
     """ Aqui iremos testar se está retornando todos os valores dados do employee: METHOD: GET (By Id) """
     def test_api_can_get_a_employeelist(self):
 
         employeelist = EmployeeList.objects.get()
         response = self.client.get(
-            reverse('details'),
-            kwargs={'pk': employeelist.id}, format="json")
+            reverse('details', args=(employeelist.id,)))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertContains(response, employeelist)
-    
+
     """ Aqui iremos testar se estará atualizando os valores para employee: METHOD: PUT"""
     def test_api_can_update_employeelist(self):
 
         employeelist = EmployeeList.objects.get()
         change_employeelist = {'name': 'New Employee'}
         res = self.client.put(
-            reverse('details', kwargs={'pk': employeelist.id}),
+            reverse('details', args=(employeelist.id,)),
             change_employeelist, format="json")
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
