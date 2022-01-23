@@ -178,12 +178,11 @@ Os dados foram alterados com sucesso! :D
 
 E enfim, o último método. Vamos excluir esse funcionário.... :( :( :( e Vejam o resultado abaixo:
 
-![alt tag](https://i.imgsafe.org/22b408e378.png)
+![image](https://user-images.githubusercontent.com/276077/150684227-95e78c96-3fa6-431c-bad1-80bba8d06976.png)
 
 O Funcionário foi devidademente excluído e ao listar via GET observem que o funcionário(a) não consta mais na lista:
 
-![alt tag](https://i.imgsafe.org/22bab75efe.png)
-
+![image](https://user-images.githubusercontent.com/276077/150684253-702a33bb-f925-4f31-b3ec-2bb30c276ab7.png)
 
 ## Observações Finais:
 
