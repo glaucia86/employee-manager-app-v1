@@ -90,20 +90,20 @@ Para que o projeto execute de maneira satisfatória, há a necessidade de instal
 Na pasta do projeto, digite: 
 
 ```
-> python -m venv venvapi
+ python -m venv venvapi
 
 ```
 
 3) Inicializar o ambiente virtual.
 
 ```
-> source venvapi/bin/activate
+ source venvapi/bin/activate
 ```
 
 4) Instalar os requisitos do projeto da seguinte maneira:
   
 ```
-> pip -r requirements.txt
+ pip -r requirements.txt
 
 ```
 
@@ -115,7 +115,7 @@ digitar o seguinte comando abaixo:
 
 ```
 
-> python manage.py test
+ python manage.py test
 
 ```
 
@@ -128,7 +128,7 @@ Antes.... execute o comando, na pasta raiz do projeto: 'api' o cmd:
 
 ```
 
-> python manage.py runserver
+ python manage.py runserver
 
 ```
 
