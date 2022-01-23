@@ -40,12 +40,12 @@ E o resultado do JSon (Response) deverá ser (exemplo):
 
 ## Recursos Utilizados no Desenvolvimento da Aplicação:
 
-- Python ~ 3.5.0;
-- Pip ~ 9.0.1;
-- VirtualEnv ~ 15.1.0;
+- Python ~  3.8.10;
+- Pip ~ 20.0.2;
+- VirtualEnv ~ ?;
 - Conceito RestFul;
-- Django Rest Framework ~ 3.5.4;
-- Django ~ 1.10;
+- Django Rest Framework ~ 3.13.1;
+- Django ~ 4.1.0;
 - Conceito Web & HTTP Protocol;
 - IDE: Visual Code;
 - Navicat Premium (para fácil manipulação da base de dados - SQLite);
@@ -83,7 +83,7 @@ Como estaremos desenvolvendo usando o framework do Python - **Django** - trabalh
 Para que o projeto execute de maneira satisfatória, há a necessidade de instalar os programas abaixo:
 
 1) Instalar: Python [AQUI](https://www.python.org/downloads/)
-  - Video explicando como instalar Python 3.5 [AQUI](https://www.youtube.com/watch?v=YdNiifNwt_M)
+  - Video explicando como instalar Python 3.8 [AQUI](https://www.youtube.com/watch?v=UI2OKHxLWfg)
 
 2) Instalar Django de maneira global da seguinte maneira:
   
@@ -217,6 +217,7 @@ Curti tanto programar em Python & Django que irei escrever um tutorial sobre a l
 * O único ponto negativo para mim foi a dificuldade em instalar os programar uma vez que o meu S.O é o Windows. Porém, como eu já programei em CentOs (RED HAT) então.... acredito que é questão de costume.
 
 * Procurei ler a documentação do Django e ver alguns cursos de Python para entender um pouco a sintaxe da linguagem.
-A questão do TDD.... se vocês executarem o teste... infelizmente vai executar com erros.... eu tentei e tentei ver onde eu falhei.. mas.. infelizmente, não consegui encontrar o erro.... (mas, como não foi solicitado acredito que seja um plus eu ter tentado!! :D )
+A questão do TDD.... se vocês executarem o teste... infelizmente vai executar com erros (NÃO MAIS).... eu tentei e tentei ver onde eu falhei.. mas.. infelizmente, não consegui encontrar o erro.... (mas, como não foi solicitado acredito que seja um plus eu ter tentado!! :D )
+
 
 * Bom... espero que tenham gostado. Vou fazer a versão dessa app em Node. E caso vocês queiram ver... bastam clicar [AQUI](https://github.com/glaucia86/employee-manager-app-node-v1)
