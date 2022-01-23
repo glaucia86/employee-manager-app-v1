@@ -85,51 +85,28 @@ Para que o projeto execute de maneira satisfatória, há a necessidade de instal
 1) Instalar: Python [AQUI](https://www.python.org/downloads/)
   - Video explicando como instalar Python 3.8 [AQUI](https://www.youtube.com/watch?v=UI2OKHxLWfg)
 
-2) Instalar Django de maneira global da seguinte maneira:
+2) Criar um ambiente virtual usando o virtualenv do python:
+
+Na pasta do projeto, digite: 
+
+```
+> python -m venv venvapi
+
+```
+
+3) Inicializar o ambiente virtual.
+
+```
+> source venvapi/bin/activate
+```
+
+4) Instalar os requisitos do projeto da seguinte maneira:
   
-Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
-
 ```
-> python -m pip install django 
+> pip -r requirements.txt
 
 ```
 
-3) Instalar o VirtualEnv de maneira global da seguinte maneira:
-
-Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
-
-```
-> python -m pip instal virtualenv
-
-```
-
-4) Instalar o Django Rest Framework:
-
-Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
-
-```
-> python -m pip instal djangorestframework
-
-```
-
-Bom, depois que tudo estiver instalado, vamos averiguar se todo o ambiente já está preparado. Para isso, basta digitar o seguinte comando abaixo:
-
-```
-
-> python -m pip freeze
-
-```
-
-Se ao digitar o comando e apresentar: Django, Pyscopg2 e Virtualenv com as suas versões é porque estão devidamente instalados no computador.
-
-```
-C:\>python -m pip freeze
-Django==1.10.5
-psycopg2==2.6.2
-virtualenv==15.1.0
-djangorestframework==3.5.4
-
-```
 
 ## Executando os testes na Aplicação:
 
