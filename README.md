@@ -142,34 +142,35 @@ curl -H "Content-Type: application/javascript" http://localhost:8000/employee/
 
 E vejam a lista de todos os funcionários cadastrados abaixo: 
 
-![alt tag](https://i.imgsafe.org/227579d913.png)
+![image](https://user-images.githubusercontent.com/276077/150683618-e506ec0f-5281-4764-bc7f-a51179139308.png)
 
+Request no Postman: 
 
+![image](https://user-images.githubusercontent.com/276077/150683697-68c3dcfa-f65b-411e-878e-764d5b94c0d7.png)
 
 
 ### 2) Método: POST (Criar Novo: http://localhost:8000/employee/ )
 
 Na mesma página, insira um novo cadastro nos campos abaixo e clique no botão POST. E vejam o resultado abaixo:
 
-![alt tag](https://i.imgsafe.org/228955dda4.png)
+![image](https://user-images.githubusercontent.com/276077/150683793-d92ccb0f-e8b0-40b3-8240-e1fc40374122.png)
 
 Agora cliquem no botão GET e vejam o resultado. Aparecerá o novo empregado na lista:
 
-![alt tag](https://i.imgsafe.org/22909269dc.png)
-
+![image](https://user-images.githubusercontent.com/276077/150683824-9416d3ee-c5f6-4af1-bae9-64b5acd995a6.png)
 
 ### 3) Método: GET (By Id) (Selecionar Por Id: http://localhost:8000/employee/:employee_id/ )
 
 Bom, agora vamos regastar um determinado funcionário através do id. E vejam o resultado abaixo:
 
-![alt tag](https://i.imgsafe.org/229f1c7fc1.png)
-
+![image](https://user-images.githubusercontent.com/276077/150683848-42f4cf3d-d42b-4fcf-a571-e1bcb2daa043.png)
 
 ### 4) Método: PUT (Atualizar Por Id: http://localhost:8000/employee/:employee_id/ )
 
 Assim como o método acima, vamos atualizar (alterar) o cadastro e depois cliquem no botão PUT e vejam o resultado abaixo:
+Note que o 'department' foi mudado para 'mobile'. 
 
-![alt tag](https://i.imgsafe.org/22a8ed0690.png)
+![image](https://user-images.githubusercontent.com/276077/150684101-56ddb6f2-cf53-4d27-b8b2-f1b0ea8f44cd.png)
 
 Os dados foram alterados com sucesso! :D
 
