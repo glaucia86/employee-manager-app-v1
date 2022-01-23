@@ -40,12 +40,12 @@ E o resultado do JSon (Response) deverá ser (exemplo):
 
 ## Recursos Utilizados no Desenvolvimento da Aplicação:
 
-- Python ~ 3.5.0;
-- Pip ~ 9.0.1;
-- VirtualEnv ~ 15.1.0;
+- Python ~  3.8.10;
+- Pip ~ 20.0.2;
+- VirtualEnv ~ ?;
 - Conceito RestFul;
-- Django Rest Framework ~ 3.5.4;
-- Django ~ 1.10;
+- Django Rest Framework ~ 3.13.1;
+- Django ~ 4.1.0;
 - Conceito Web & HTTP Protocol;
 - IDE: Visual Code;
 - Navicat Premium (para fácil manipulação da base de dados - SQLite);
@@ -83,53 +83,28 @@ Como estaremos desenvolvendo usando o framework do Python - **Django** - trabalh
 Para que o projeto execute de maneira satisfatória, há a necessidade de instalar os programas abaixo:
 
 1) Instalar: Python [AQUI](https://www.python.org/downloads/)
-  - Video explicando como instalar Python 3.5 [AQUI](https://www.youtube.com/watch?v=YdNiifNwt_M)
+  - Video explicando como instalar Python 3.8 [AQUI](https://www.youtube.com/watch?v=UI2OKHxLWfg)
 
-2) Instalar Django de maneira global da seguinte maneira:
+2) Criar um ambiente virtual usando o virtualenv do python:
+
+Na pasta do projeto, digite: 
+
+```
+ python -m venv venvapi
+```
+
+3) Inicializar o ambiente virtual.
+
+```
+ source venvapi/bin/activate
+```
+
+4) Instalar os requisitos do projeto da seguinte maneira:
   
-Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
-
 ```
-> python -m pip install django 
-
+ pip -r requirements.txt
 ```
 
-3) Instalar o VirtualEnv de maneira global da seguinte maneira:
-
-Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
-
-```
-> python -m pip instal virtualenv
-
-```
-
-4) Instalar o Django Rest Framework:
-
-Deverá abrir o seu cmd e digitar o seguinte comando abaixo:
-
-```
-> python -m pip instal djangorestframework
-
-```
-
-Bom, depois que tudo estiver instalado, vamos averiguar se todo o ambiente já está preparado. Para isso, basta digitar o seguinte comando abaixo:
-
-```
-
-> python -m pip freeze
-
-```
-
-Se ao digitar o comando e apresentar: Django, Pyscopg2 e Virtualenv com as suas versões é porque estão devidamente instalados no computador.
-
-```
-C:\>python -m pip freeze
-Django==1.10.5
-psycopg2==2.6.2
-virtualenv==15.1.0
-djangorestframework==3.5.4
-
-```
 
 ## Executando os testes na Aplicação:
 
@@ -137,9 +112,7 @@ Para executar os testes criados na aplicação, você deverá ir até a pasta da
 digitar o seguinte comando abaixo:
 
 ```
-
-> python manage.py test
-
+ python manage.py test
 ```
 
 
@@ -150,49 +123,46 @@ digitar o seguinte comando abaixo:
 Antes.... execute o comando, na pasta raiz do projeto: 'api' o cmd:
 
 ```
-
-> python manage.py runserver
-
+ python manage.py runserver
 ```
 
 Depois Abre a página em 
 
 ```
-
 curl -H "Content-Type: application/javascript" http://localhost:8000/employee/
-
 ```
 
 E vejam a lista de todos os funcionários cadastrados abaixo: 
 
-![alt tag](https://i.imgsafe.org/227579d913.png)
+![image](https://user-images.githubusercontent.com/276077/150683618-e506ec0f-5281-4764-bc7f-a51179139308.png)
 
+Request no Postman: 
 
+![image](https://user-images.githubusercontent.com/276077/150683697-68c3dcfa-f65b-411e-878e-764d5b94c0d7.png)
 
 
 ### 2) Método: POST (Criar Novo: http://localhost:8000/employee/ )
 
 Na mesma página, insira um novo cadastro nos campos abaixo e clique no botão POST. E vejam o resultado abaixo:
 
-![alt tag](https://i.imgsafe.org/228955dda4.png)
+![image](https://user-images.githubusercontent.com/276077/150683793-d92ccb0f-e8b0-40b3-8240-e1fc40374122.png)
 
 Agora cliquem no botão GET e vejam o resultado. Aparecerá o novo empregado na lista:
 
-![alt tag](https://i.imgsafe.org/22909269dc.png)
-
+![image](https://user-images.githubusercontent.com/276077/150683824-9416d3ee-c5f6-4af1-bae9-64b5acd995a6.png)
 
 ### 3) Método: GET (By Id) (Selecionar Por Id: http://localhost:8000/employee/:employee_id/ )
 
 Bom, agora vamos regastar um determinado funcionário através do id. E vejam o resultado abaixo:
 
-![alt tag](https://i.imgsafe.org/229f1c7fc1.png)
-
+![image](https://user-images.githubusercontent.com/276077/150683848-42f4cf3d-d42b-4fcf-a571-e1bcb2daa043.png)
 
 ### 4) Método: PUT (Atualizar Por Id: http://localhost:8000/employee/:employee_id/ )
 
 Assim como o método acima, vamos atualizar (alterar) o cadastro e depois cliquem no botão PUT e vejam o resultado abaixo:
+Note que o 'department' foi mudado para 'mobile'. 
 
-![alt tag](https://i.imgsafe.org/22a8ed0690.png)
+![image](https://user-images.githubusercontent.com/276077/150684101-56ddb6f2-cf53-4d27-b8b2-f1b0ea8f44cd.png)
 
 Os dados foram alterados com sucesso! :D
 
@@ -200,12 +170,11 @@ Os dados foram alterados com sucesso! :D
 
 E enfim, o último método. Vamos excluir esse funcionário.... :( :( :( e Vejam o resultado abaixo:
 
-![alt tag](https://i.imgsafe.org/22b408e378.png)
+![image](https://user-images.githubusercontent.com/276077/150684227-95e78c96-3fa6-431c-bad1-80bba8d06976.png)
 
 O Funcionário foi devidademente excluído e ao listar via GET observem que o funcionário(a) não consta mais na lista:
 
-![alt tag](https://i.imgsafe.org/22bab75efe.png)
-
+![image](https://user-images.githubusercontent.com/276077/150684253-702a33bb-f925-4f31-b3ec-2bb30c276ab7.png)
 
 ## Observações Finais:
 
@@ -219,4 +188,13 @@ Curti tanto programar em Python & Django que irei escrever um tutorial sobre a l
 * Procurei ler a documentação do Django e ver alguns cursos de Python para entender um pouco a sintaxe da linguagem.
 A questão do TDD.... se vocês executarem o teste... infelizmente vai executar com erros.... eu tentei e tentei ver onde eu falhei.. mas.. infelizmente, não consegui encontrar o erro.... (mas, como não foi solicitado acredito que seja um plus eu ter tentado!! :D )
 
+
 * Bom... espero que tenham gostado. Vou fazer a versão dessa app em Node. E caso vocês queiram ver... bastam clicar [AQUI](https://github.com/glaucia86/employee-manager-app-node-v1)
+
+## Atualizações 2022
+
+* Os requisitos/códigos foram atualizados para rodar com uma versão mais recente de python e django. 
+
+* Os testes foram atualizados e estão funcionando. 
+
+* O Readme foi atualizado para exibir as imagens do request e atualizar o passo a passo da instalação dos requisitos do projeto. 
