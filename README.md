@@ -195,6 +195,6 @@ A questão do TDD.... se vocês executarem o teste... infelizmente vai executar 
 
 * Os requisitos/códigos foram atualizados para rodar com uma versão mais recente de python e django. 
 
-* Os testes foram atualizados e estão funcinonando. 
+* Os testes foram atualizados e estão funcionando. 
 
 * O Readme foi atualizado para exibir as imagens do request e atualizar o passo a passo da instalação dos requisitos do projeto. 
