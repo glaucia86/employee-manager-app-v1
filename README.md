@@ -91,7 +91,6 @@ Na pasta do projeto, digite:
 
 ```
  python -m venv venvapi
-
 ```
 
 3) Inicializar o ambiente virtual.
@@ -104,7 +103,6 @@ Na pasta do projeto, digite:
   
 ```
  pip -r requirements.txt
-
 ```
 
 
@@ -114,9 +112,7 @@ Para executar os testes criados na aplicação, você deverá ir até a pasta da
 digitar o seguinte comando abaixo:
 
 ```
-
  python manage.py test
-
 ```
 
 
@@ -127,17 +123,13 @@ digitar o seguinte comando abaixo:
 Antes.... execute o comando, na pasta raiz do projeto: 'api' o cmd:
 
 ```
-
  python manage.py runserver
-
 ```
 
 Depois Abre a página em 
 
 ```
-
 curl -H "Content-Type: application/javascript" http://localhost:8000/employee/
-
 ```
 
 E vejam a lista de todos os funcionários cadastrados abaixo: 
